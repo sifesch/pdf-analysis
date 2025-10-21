@@ -1,0 +1,47 @@
+Character Classes:
+[a-z] - All lowercase letters
+[A-Z] - All uppercase letters
+[0-9] - All digits
+[aeiou] - Custom list of individual characters to match against
+[^0-9] - Negative match—any character that is not in the list
+
+Occurences:
+{1,3} - Define a range—the first digit is the minimum value, and the second is the maximum value
+{4} - Number of times the pattern should be matched
++ - Match one (1) or more of the specified pattern
+* - Match zero (0) or more of the specified pattern
+? – Match (0)zero or one (1) of the specified pattern
+
+Escape Characters:
+[0-9\+] - Pattern could contain 0-9 or a literal +
+
+
+Meta Characters:
+. (dot) - Matches any character except newline
+\d - Matches any digit
+\D - Matches any non-digit character
+\s - Matches any whitespace character
+There are multiple whitespace characters [\n\r\t\f]
+\S - Matches any non-whitespace character
+^ - Start of the line
+$ - End of the line
+a|b	Match either a or b
+\w	Any word character
+\W	Any non-word character
+\s	matches any whitespace character
+\S	Match any non-whitespace character
+\b	Matches a word boundary
+\B	Match must not occur on a \b boundary.
+[\b]	Backspace character
+\xYY	Match hex character YY
+\ddd	Octal character ddd
+
+Flag	Shorthand	Description
+re.ASCII	re.A	Returns only ASCII matches	
+re.DEBUG		Returns debug information	
+re.DOTALL	re.S	Makes the . character match all characters (including newline character)	
+re.IGNORECASE	re.I	Case-insensitive matching	
+re.MULTILINE	re.M	Returns only matches at the beginning of each line	
+re.NOFLAG		Specifies that no flag is set for this pattern	
+re.UNICODE	re.U	Returns Unicode matches. This is default from Python 3. For Python 2: use this flag to return only Unicode matches	
+re.VERBOSE	re.X	Allows whitespaces and comments inside patterns. Makes the pattern more readable
